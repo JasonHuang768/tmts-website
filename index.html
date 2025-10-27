@@ -236,7 +236,7 @@
                         <p>tmts2026@tmba.org.tw</p>
                     </div>
                     <div class="theme2026-step-item">
-                        <p>聯絡窗口：Tasha 簡蒂儀</p>
+                        <p>聯絡窗口：Tasha 鄭菀儀</p>
                         <p>TEL 04-2350-7586</p>
                     </div>
                 </div>
@@ -266,6 +266,36 @@
             </div>
         </div>
     </section>
+
+    <!-- 浮動報名表單下載視窗 -->
+    <div class="theme2026-float-widget">
+        <div class="theme2026-float-tab" onclick="toggleFloatWidget()">
+            <span class="theme2026-tab-text">報名表單</span>
+        </div>
+        <div class="theme2026-float-content" id="floatContent">
+            <div class="theme2026-float-header">
+                <h3>報名表單下載</h3>
+                <button class="theme2026-close-btn" onclick="toggleFloatWidget()">×</button>
+            </div>
+            <div class="theme2026-float-body">
+                <p class="theme2026-float-description">請下載並填寫報名表單</p>
+                <div class="theme2026-download-links">
+                    <a href="#" class="theme2026-download-btn" download>
+                        <span class="theme2026-icon">📄</span>
+                        <span>報名表單 (PDF)</span>
+                    </a>
+                    <a href="#" class="theme2026-download-btn" download>
+                        <span class="theme2026-icon">📊</span>
+                        <span>報名表單 (Word)</span>
+                    </a>
+                </div>
+                <div class="theme2026-float-footer">
+                    <p>填寫完成後請寄送至：</p>
+                    <p class="theme2026-email-link">tmts2026@tmba.org.tw</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Intersection Observer 用於偵測元素進入視窗
@@ -311,6 +341,20 @@
         const ctaButton = document.querySelector('.theme2026-sec10-cta-button');
         if (ctaButton) {
             blinkObserver.observe(ctaButton);
+        }
+
+        // 浮動視窗切換功能
+        function toggleFloatWidget() {
+            const floatContent = document.getElementById('floatContent');
+            const floatWidget = document.querySelector('.theme2026-float-widget');
+
+            if (floatContent.classList.contains('theme2026-active')) {
+                floatContent.classList.remove('theme2026-active');
+                floatWidget.classList.remove('theme2026-expanded');
+            } else {
+                floatContent.classList.add('theme2026-active');
+                floatWidget.classList.add('theme2026-expanded');
+            }
         }
     </script>
 
