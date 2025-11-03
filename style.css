@@ -395,12 +395,12 @@ section {
 .theme2026-contact-info-text {
     
     position: absolute;
-    right: 2%;
+    right: 1%;
     width: 19%;
     aspect-ratio: 1 / 1;
     color: #000;
     top: 50%;
-    transform: translateY(-55%);
+    transform: translateY(-20%);
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -486,6 +486,13 @@ section {
     font-size: 1vw;
     color: #333;
     line-height: 1.8;
+}
+
+.theme2026-desc-line1,
+.theme2026-desc-line2,
+.theme2026-desc-line3,
+.theme2026-desc-line4 {
+    letter-spacing: 2px;
 }
 
 /* Section 8 */
@@ -800,6 +807,517 @@ section {
     margin: 0;
 }
 
+/* 桌面版：顯示桌面版內容，隱藏手機版內容 */
+.theme2026-desktop-only {
+    display: block;
+}
+
+.theme2026-mobile-only {
+    display: none;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Section 1 - 高度調整為原來的 2/3 */
+    .theme2026-top-banner {
+        padding: 0px 0; /* 原本 15px，調整為 2/3 */
+    }
+
+    /* Banner Title - 高度調整為原來的 1/2 */
+    .theme2026-banner-title {
+        height: 20px; /* 原本 40px，調整為 1/2 */
+    }
+
+    /* Section 2 - Hero Content 背景改用手機版圖片 */
+    .theme2026-hero-content {
+        background-image: url('img/sec2/sec2_title_bg_m.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        aspect-ratio: 1080 / 648;
+        padding: 17px 93px 0px;
+    }
+
+    /* Hero Title - 改用手機版圖片 */
+    .theme2026-hero-title {
+        content: url('img/sec2/sec2_title_m.png');
+        margin-bottom: 15px;
+        /* max-height: 45vw; */
+    }
+
+    /* Hero Title 下方文字 */
+    .theme2026-hero-left::after {
+        content: '| 與TMTS聯手行銷。讓你的產品被全球看見 |';
+        display: block;
+        font-size: 3.2vw;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1px;
+        width: auto;
+        min-width: 100%;
+        transform: scale(0.95);
+        white-space: nowrap;
+
+    }
+
+    /* Hero Subtitle 文字大小調整 */
+    .theme2026-subtitle-line1,
+    .theme2026-subtitle-line2,
+    .theme2026-subtitle-line3 {
+        font-size: 3vw;
+    }
+    .theme2026-hero-subtitle {
+        width: 100%;
+        background-image: url(img/sec2/sec2_subtitle_bg.png);
+    }
+    .theme2026-hero-section {
+        background-image: url(img/sec2/sec2_2_bg.png);
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        aspect-ratio: 1077 / 989;
+        background-color: #0e145b;
+    }
+    .theme2026-hero-subtitle p {
+        line-height: 1.1;
+    }
+    .theme2026-section-title{
+        font-size: 4vw;
+    }
+    .theme2026-main-text{
+        font-size: 2.7vw;
+        line-height: 1.6;
+    }
+    .theme2026-text-blue{
+        letter-spacing: 1px;
+    }
+
+    /* 手機版顯示手機版內容，隱藏桌面版內容 */
+    .theme2026-desktop-only {
+        display: none;
+    }
+
+    .theme2026-mobile-only {
+        display: block;
+    }
+    .theme2026-sec3-title-line{
+        width: 50vw;
+    }
+
+    /* Section 4 - 手機版佈局調整 */
+    .theme2026-strategy-section {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .theme2026-strategy-graph {
+        width: 90%;
+        order: 1;
+        margin-left: -12vw;
+    }
+
+    .theme2026-strategy-content {
+        width: 90%;
+        order: 2;
+    }
+    .theme2026-strategy-title {
+        font-size: 3.5vw;
+        text-align: center;
+        letter-spacing: 0.3vw;
+    }
+    .theme2026-strategy-text {
+        font-size: 2.7vw;
+        text-align: center;
+    }
+    .theme2026-strategy-content{
+        gap: 5vw;
+    }
+    .theme2026-sec4{
+        padding: 5% 10% 4% 10%;
+    }
+    /* Section 6 - 手機版長寬比與底圖 */
+    .theme2026-sec6 {
+        background-image: url('img/sec6/sec6_bg_mobile.png');
+        aspect-ratio: 1080 / 1217;
+        align-items: flex-start;
+    }
+
+    .theme2026-sec6-content {
+        margin: 12% auto 0;
+    }
+
+    /* Section 6 字體放大兩倍 */
+    .theme2026-sec6-title {
+        font-size: 3.74vw;
+    }
+    .theme2026-sec6-title-line{
+        width: 45vw;
+    }
+
+    .theme2026-sec6-subtitle {
+        font-size: 3vw;
+        margin-bottom: 3.9vh;
+        letter-spacing: 0.5vw;
+    }
+
+    .theme2026-sec6-description p {
+        font-size: 2.6vw;
+        margin: 0 0 4px 0;
+    }
+    .theme2026-sec6-date{
+        margin-bottom: 4px;
+    }
+    .theme2026-sec6-date p {
+        font-size: 2.8vw;
+    }
+
+    .theme2026-date-bar {
+        font-size: 2.8vw;
+    }
+
+    .theme2026-sec6-footer {
+        font-size: 2.8vw;
+    }
+
+    /* 聯絡資訊區塊 - 手機版靜態排列 */
+    .theme2026-contact-info-text.theme2026-mobile-only {
+        position: static;
+        transform: none;
+        width: 58%;
+        text-align: center;
+        margin-top: 2%;
+        margin-left: 22%;
+        
+        padding: 10% 10%;
+        display: block;
+        background-image: url('img/sec6/bluecircle.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .theme2026-contact-info-text.theme2026-mobile-only p {
+        margin: 5px 0;
+        font-size: 2.8vw;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .theme2026-contact-info-text.theme2026-mobile-only .theme2026-name-large {
+        font-size: 4.4vw;
+    }
+
+    .theme2026-sec6-description {
+        margin-bottom: 2vh;
+        letter-spacing: 1px;
+    }
+    .theme2026-thin-text {
+        font-size: 2.8vw;
+        font-weight: 300;
+    }
+    .theme2026-bold-text {
+        font-size: 2.8vw;
+        font-weight: 600;
+    }
+
+    /* Section 7 字體放大兩倍 */
+    .theme2026-sec7-title {
+        font-size: 3.34vw;
+    }
+
+    .theme2026-sec7-subtitle {
+        font-size: 3vw;
+        font-weight: 800;
+        margin: 0 0 4vh 0;
+    }
+
+    .theme2026-sec7-description p {
+        font-size: 2.5vw;
+    }
+
+    /* Section 8 - 手機版背景圖與長寬比 */
+    .theme2026-sec8 {
+        background-image: url('img/sec8/sec8bg_mobile.png');
+        aspect-ratio: 1080 / 1498;
+    }
+
+    .theme2026-sec8-content {
+        position: relative;
+    }
+
+    /* Section 8 - 手機版直向文字 */
+    .theme2026-sec8-mobile {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        padding: 10% 8%;
+    }
+
+    .theme2026-vertical-text-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 70%;
+        
+        
+        margin-left: 15%;
+    }
+
+    .theme2026-vertical-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        /* background: rgba(0, 0, 0, 0.4); */
+        padding: 3vw 1vw;
+        color: #fff;
+        flex: 1;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .theme2026-vertical-block.theme2026-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 為每個 vertical-block 設置不同的延遲時間 */
+    .theme2026-vertical-text-container .theme2026-vertical-block:nth-child(1).theme2026-visible {
+        transition-delay: 0s;
+    }
+
+    .theme2026-vertical-text-container .theme2026-vertical-block:nth-child(2).theme2026-visible {
+        transition-delay: 0.25s;
+    }
+
+    .theme2026-vertical-text-container .theme2026-vertical-block:nth-child(3).theme2026-visible {
+        transition-delay: 0.5s;
+    }
+
+    .theme2026-vertical-text-container .theme2026-vertical-block:nth-child(4).theme2026-visible {
+        transition-delay: 0.75s;
+    }
+
+    .theme2026-vertical-intro {
+        position: absolute;
+        left: 15%;
+        top: 7%;
+        background: none;
+        padding: 3vw 0;
+        width: 6vw;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .theme2026-vertical-block h3 {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 3.5vw;
+        font-weight: 400;
+        margin: 0;
+        letter-spacing: 0.2em;
+        padding: 0;
+        border: none;
+        
+        
+    }
+
+    .theme2026-vertical-intro h3 {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 2.3vw;
+    }
+
+    .theme2026-vertical-block p {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        font-size: 2.5vw;
+        font-weight: 300;
+        margin: 0;
+        line-height: 1.2;
+        letter-spacing: 0.3em;
+    }
+    .theme2026-vertical-block-eng {
+        writing-mode: vertical-rl;
+        letter-spacing: 0em;
+    }
+
+    .theme2026-vertical-divider {
+        display: block;
+        width: 60%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* 手機版 CTA 區塊 */
+    .theme2026-sec8-mobile-cta {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: 2px;
+    }
+
+    .theme2026-sec8-mobile-highlight {
+        font-size: 2.8vw;
+        color: #333;
+        margin: 0;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .theme2026-sec8-mobile-cta-text {
+        font-size: 2.3vw;
+        color: #333;
+        margin: 0;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* Section 9 - 手機版 */
+    .theme2026-sec9 {
+        background-image: url('img/sec9/sec9bg_mobile.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        aspect-ratio: 1080 / 2454;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme2026-sec9-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .theme2026-sec9-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22vw;
+        padding: 13vw 10vw;
+        width: 100%;
+    }
+
+    .theme2026-mobile-step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .theme2026-mobile-step-blocks {
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        width: 100%;
+        
+    }
+
+    .theme2026-trapezoid {
+        width: 280px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .theme2026-trapezoid-blue {
+        /* background-color: #0066cc; */
+        /* border: 1px solid rgb(104, 0, 0); */
+        height: 21vw;
+    }
+
+    .theme2026-trapezoid-teal {
+        /* background-color: #01a89e; */
+        /* border: 1px solid rgb(104, 0, 0); */
+        height: 20.5vw;
+    }
+
+    .theme2026-trapezoid p {
+        margin: 0;
+        color: #fff;
+        font-size: 3.2vw;
+        line-height: 1.4;
+        font-weight: 300;
+        letter-spacing: 0.06em;
+    }
+
+    /* Section 10 - 手機版 */
+    .theme2026-sec10 {
+        display: block;
+        aspect-ratio: 1080 / 947;
+        background-image: url('img/sec10/sec10_bg_mobile.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .theme2026-sec10-content {
+        width: 80%;
+        margin: 0 0 0 10%;
+    }
+    .theme2026-sec10-main-text {
+        margin-top: 40%;
+    }
+    .theme2026-sec10-highlight {
+        font-size: 2.4vw;
+        letter-spacing: 0.1em;
+    }
+    .theme2026-sec10-description {
+        font-size: 2.4vw;
+        letter-spacing: 0.1em;
+    }
+    .theme2026-sec10-cta-button{
+        margin-top: 7%;
+    }
+    .theme2026-sec10-cta-button .theme2026-cta-line1 {
+        font-size: 2.8vw;
+        letter-spacing: 0.1em;
+        margin: 0 0 0 0;
+    }
+    .theme2026-sec10-cta-button .theme2026-cta-line2 {
+        font-size: 2.8vw;
+        letter-spacing: 0.1em;
+    }
+
+    /* Section 10 联络信息字体放大两倍 */
+    .theme2026-sec10-contact .theme2026-contact-title {
+        font-size: 2vw;
+        letter-spacing: 0.1em;
+    }
+
+    .theme2026-sec10-contact .theme2026-contact-org {
+        font-size: 2vw;
+        letter-spacing: 0.1em;
+    }
+
+    .theme2026-sec10-contact .theme2026-contact-email,
+    .theme2026-sec10-contact .theme2026-contact-phone {
+        font-size: 2vw;
+        letter-spacing: 0.1em;
+    }
+
+}
+
 /* 浮動報名表單視窗 */
 .theme2026-float-widget {
     position: fixed;
@@ -816,7 +1334,7 @@ section {
 
 .theme2026-float-tab {
     position: absolute;
-    right: 100%;
+    right: 98%;
     top: 50%;
     transform: translateY(-50%);
     background: linear-gradient(135deg, #0066cc 0%, #003f7e 100%);
@@ -963,6 +1481,10 @@ section {
 
 /* 響應式設計 */
 @media screen and (max-width: 768px) {
+    .theme2026-float-widget {
+        right: -300px;
+    }
+
     .theme2026-float-content {
         width: 300px;
     }
@@ -972,6 +1494,18 @@ section {
     }
 
     .theme2026-tab-text {
+        font-size: 14px;
+    }
+
+    .theme2026-float-tab {
+        padding: 15px 10px;
+    }
+
+    .theme2026-download-btn {
+        padding: 12px 15px;
+    }
+
+    .theme2026-download-btn span:last-child {
         font-size: 14px;
     }
 }
